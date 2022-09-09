@@ -1,0 +1,39 @@
+﻿<Window x:Class="ComboLIst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComboLIst"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <ComboBox Name="comboBox"></ComboBox>
+            <Label>Что-то наисать надо</Label>
+            <TextBox Name="textBox"></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button MinWidth="120" Content="Добавить" Click="Button_Click"></Button>
+                <Button MinWidth="120" Content="Удалить" Click="Button_Click"></Button>
+                <Button Name="orty" MinWidth="100" Content="Очистить" Click="orty_Click" Width="104"></Button>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="0,145,0,0">
+            <Button Height="50">Перенести</Button>
+            <Button Height="50">Копировать</Button>
+            <Button Height="50">Вернуть</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <ListBox Height="225"></ListBox>
+            <Button Height="50">Удалить выбранный элемент</Button>
+            <Button Height="50">Очистить весь ListBox</Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>
